@@ -24,9 +24,9 @@ BasePage: Here I have instansiated WebDriver to use in the whole framework with 
 
 Utils: This extends BasePage class to use it's properties, mainly WebDriver. It has all the reusable methods to be used in the test scripts.
 
-BrowserSelector: BrowserSelector extends Utils to use the properties of BasePage class and Utils class. It has the logic to open the desired browser which is assigned to 'browser' variable in TestDataConfig.properties file which I will explain more about it .
+BrowserSelector: BrowserSelector extends Utils to use the properties of BasePage class and Utils class. It has the logic to open the desired browser which is assigned to 'browser' variable in TestConfig.properties file which I will explain more about it .
 
-Loadprop: This class has the logic to assign test data and browser names by creating a TestDataConfig.properties file for the test to fetch the data from this file run test in relevant browser and use data assigned in relevant variables. You will find a path defined in this class. This is the path to TestDataConfig.properties file.
+Loadprop: This class has the logic to assign test data and browser names by creating a TestConfig.properties file for the test to fetch the data from this file run test in relevant browser and use data assigned in relevant variables. You will find a path defined in this class. This is the path to TestConfig.properties file.
 
 PageObjects Package: This interface has Java .java files for every page user navigates to. These .java files have names relevant to the pages user is on and contains locators and methods for the user to perform some action. This will avoid duplication of code and the code will be easy to maintain and refactor as whenever there is any change to a feature on the page we change it in one place. It saves a lot of time and effort and also it is more readable for someone else reading the code. .java files in Page object extends Utils to use the properties of Utils and BasePage
 
@@ -36,7 +36,7 @@ Java classes in Test/Java section
 
 Hooks: This class extends Utils to use the properties of BasePage and Utils if required. There are mainly 2 Junit annotations @Before and @After. @Before will execute the logic written in it before any feature files are executed. @After will execute the logic written in it after the completion of a feature file journey
 
-MyStepDefs: This .java file has snippets created via feature file's Given, When, Then steps written in it. This is integrated with the help of @Runwith and @CucumberOptions annotations in Runtest .java file. These snippets are converted to methods of the same Given, When, Then steps written in .feature files in Gherkin language
+StepDefs: These .java files have snippets created via feature file's Given, When, Then steps written in it. This is integrated with the help of @Runwith and @CucumberOptions annotations in Runtest .java file. These snippets are converted to methods of the same Given, When, Then steps written in .feature files in Gherkin language
 
 RunTest: This.java file has @Runwith and @CucumberOptions annotations which are used to integrate with BDD style frameworks
 
@@ -44,13 +44,13 @@ Resources Directory: Resources Directory has 3 Directories within it. They are:
 
                  Features: This has .feature file which has test cases in it in Given, When, then format
                  
-                 BrowserDrivers: This has .exe files for internet explorer, Chrome and firefox
+                 BrowserDrivers: This has .exe files for internet explorer, Chrome and firefox (I have used chrome in my framework.                      However, I can use firefox and Internet explorer in the same manner)
                  
                  Properties: This as TestConfig.properties file mentioned previously for fetching data from it when the tests are
                  running
-Last but most important is the pom.xml file this has all the dependencies which the framework uses to run the automation files
+Last but most important is the pom.xml file this has all the dependencies which the framework uses to run the automation tests
 
-I haven't mentioned other files which are as important such as target directory, .idea directory and others
+I haven't mentioned other files which are as important such as .idea directory and others
 
 # How to execute the tests
 Download Intellij IDE community version which is free to download
