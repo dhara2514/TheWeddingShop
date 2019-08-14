@@ -18,7 +18,7 @@ public class DashboardPage extends Utils
     public void verifyDashboardPage()
     {
         // verifying DashboardPage page
-        Utils.assertTextMessage("Welcome back"+"\nDhara & keyur",_welcomeText);
+        Utils.assertTextMessage("Welcome back"+"\nDhara & Dhara",_welcomeText);
     }
 
    public void clickOnKitchenCategoryFromDashboard()
