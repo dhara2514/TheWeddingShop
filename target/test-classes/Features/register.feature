@@ -1,5 +1,5 @@
 @smoke
-Feature: Register to the website
+Feature: Registration functionality
 
   Background:
     Given user is on home page

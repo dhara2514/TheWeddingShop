@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 public class PlaceAnOrderPage extends Utils
 {
     private By _placeAnOrderContainer = By.cssSelector("div.main-content > div > div > div > h2");
-    private By _quantityEllinghamVase = By.id("quantity-2031707");
-    private By _addToOrderButtonEllinghamVase = By.id("btn-add-order-2031707");
-    private By _quantityTraditionalKettle = By.id("quantity-2031703");
-    private By _addToOrderTraditionalKettle = By.id("btn-add-order-2031703");
+    private By _quantityEllinghamVase = By.xpath("(//*[@class='form-field__input form-field__input--select  form-control'])[1]");
+    private By _addToOrderButtonEllinghamVase = By.xpath("(//*[@class='item--order-button desktop--hide btn btn-default'])[1]");
+    private By _quantityTraditionalKettle = By.xpath("(//*[@class='form-field__input form-field__input--select  form-control'])[2]");
+    private By _addToOrderTraditionalKettle = By.xpath("(//*[@class='item--order-button desktop--hide btn btn-default'])[2]");
     private By _viewBasketButton = By.xpath("(//*[@href='/manage/order-basket'])[2]");
 
 

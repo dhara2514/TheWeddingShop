@@ -1,9 +1,10 @@
 @smoke
-Feature: Use the website to find products So that user can build a personalised gift list As a customer with an upcoming wedding
-         user want to be able to find products to my taste
+Feature: Use the website to find products So that I can build a personalised gift list
+         As a customer with an upcoming wedding
+         I want to be able to find products to my taste
 
   Background:
-    Given user am on the homepage
+    Given user is on the homepage
 
   Scenario: Search for products by description and budget
 

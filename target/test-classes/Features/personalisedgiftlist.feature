@@ -1,10 +1,10 @@
-@smoke
-  Feature: Personalised gift list
+@sanity
+  Feature: Create personalised gift list and add to basket
 
     Background:
       Given user is on home page
 
-      Scenario Outline: As a user I should be able to add product to cart from my personalised gift list
+      Scenario Outline: As a user I should be able to create a personalised gift list and add product to basket
 
         When user clicks on login button
         And user navigates to login page

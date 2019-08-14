@@ -13,13 +13,14 @@ public class BasketPage extends Utils {
     private By _productInBasket = By.cssSelector("[class='basket__container']");
     private By _productNameinBasket = By.cssSelector("[class='col-sm-3']");
     private By _ellinghamTallVase = By.xpath("(//*[contains(text(),'Ellingham Tall vase, H31 x D15cm, fog')])[2]");
-    private By _basketQuantityOfKettle = By.id("order-basket-qty-2031703");
-    private By _basketQuantityOfVase = By.id("order-basket-qty-2031707");
-    private By _priceOfEachKettle = By.xpath("(//div[@class='col-sm-2'])[3]");
-    private By _priceOfEachVase = By.xpath("(//div[@class='col-sm-2'])[5]");
-    private By _subTotalPriceOfKettle = By.xpath("(//div[@class='col-sm-2'])[4]");
-    private By get_subTotalPriceOfVase = By.xpath("(//div[@class='col-sm-2'])[6]");
-
+    private By _basketQuantityOfKettle = By.xpath("(//*[@class='form-field__input form-field__input--select  form-control'])[1]");
+    private By _basketQuantityOfVase = By.xpath("(//*[@class='form-field__input form-field__input--select  form-control'])[1]");
+    private By _priceOfEachKettle = By.xpath("(//div[@class='col-sm-2'])[5]");
+    private By _priceOfEachVase = By.xpath("(//*[@class='col-sm-2'])[3]");
+    private By _subTotalOfKettle = By.xpath("(//div[@class='col-sm-2'])[6]");
+    private By _subTotalOfVase = By.xpath("(//div[@class='col-sm-2'])[4]");
+    private By _totalAmountOfBasket = By.id("basket-total");
+    private By _remainingBalance = By.id("basket-balance-remaining");
 
 
     // Store both product names in String as expected to be displayed in basket to assert
@@ -107,12 +108,12 @@ public class BasketPage extends Utils {
     public void verifySubTotalOfEachProductInBasket()
     {
         // assertion of subtotal of each kettle by using boolean condition
-        actual = driver.findElement(_subTotalPriceOfKettle).isDisplayed();
+        actual = driver.findElement(_subTotalOfKettle).isDisplayed();
         Assert.assertTrue("95.00", true);
         System.out.println("The price of each " + expectedProductName1 + " is £190 which is " + actual);
 
         // assertion of subtotal of each kettle by using boolean condition
-        actual = driver.findElement(get_subTotalPriceOfVase).isDisplayed();
+        actual = driver.findElement(_subTotalOfVase).isDisplayed();
         Assert.assertTrue("29.00",true);
         System.out.println("The price of each " + expectedProductName2 + " is £29 which is " + actual);
     }
@@ -125,7 +126,7 @@ public class BasketPage extends Utils {
         Utils.scrollUpORDown(400);
 
         // assertion of Total amount of Kettle and Vase by using boolean condition
-        actual = driver.findElement(_subTotalPriceOfKettle).isDisplayed();
+        actual = driver.findElement(_totalAmountOfBasket).isDisplayed();
         Assert.assertTrue("248.00", true);
         System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £248.00 which is " + actual);
     }
@@ -134,7 +135,7 @@ public class BasketPage extends Utils {
 
     {
         // assertion of balance remaining to pay by using boolean condition
-        actual = driver.findElement(_subTotalPriceOfKettle).isDisplayed();
+        actual = driver.findElement(_remainingBalance).isDisplayed();
         Assert.assertTrue("248.00", true);
         System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £248.00 which is " + actual);
     }
