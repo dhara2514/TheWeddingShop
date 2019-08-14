@@ -136,8 +136,8 @@ public class BasketPage extends Utils {
     {
         // assertion of balance remaining to pay by using boolean condition
         actual = driver.findElement(_remainingBalance).isDisplayed();
-        Assert.assertTrue("248.00", true);
-        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £248.00 which is " + actual);
+        Assert.assertTrue("-248.00", true);
+        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £-248.00 which is " + actual);
     }
 
 
