@@ -129,7 +129,7 @@ public class BasketPage extends Utils {
         // assertion of Total amount of Kettle and Vase by using boolean condition
         actual = driver.findElement(_totalAmountOfBasket).isDisplayed();
         Assert.assertTrue("118.00", true);
-        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £248.00 which is " + actual);
+        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £118.00 which is " + actual);
     }
 
     public void verifyBalanceRemainingToPay()
@@ -138,7 +138,7 @@ public class BasketPage extends Utils {
         // assertion of balance remaining to pay by using boolean condition
         actual = driver.findElement(_remainingBalance).isDisplayed();
         Assert.assertTrue("-118.00", true);
-        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £-248.00 which is " + actual);
+        System.out.println("The total price of " + expectedProductName1 + " & " + expectedProductName2 + " is £-118.00 which is " + actual);
     }
 
 
