@@ -14,14 +14,14 @@ public class KitchenPage extends Utils
     public void verifyKitchenUrl()
     {
        Utils.waitForElementDisplay(_kitchenHeading,5);
-       Utils.assertURL("https://www.weddingshop.com/category/kitchen");
+       Utils.assertURL("https://tws-uk-qa.azurewebsites.net/category/kitchen");
     }
-    public void clickOnProductCategoryFromKitchenPage(String productName) {
+    public void clickOnProductCategoryFromKitchenPage(String productCategory) {
 
         /* if-else blocks to get product category from scenario outline/examples
         to execute logic
          */
-        if (productName.equalsIgnoreCase("stove top kettles")){
+        if (productCategory.equalsIgnoreCase("stove top kettles")){
             Utils.scrollUpORDown(200);
             Utils.waitForElementDisplay(_stoveTopKettle,5);
             Utils.clickElementBy(_stoveTopKettle);

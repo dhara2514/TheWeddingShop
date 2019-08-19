@@ -55,7 +55,7 @@ public class RegisterPage extends Utils
     {
         // verifying registration page URL
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL,"https://www.weddingshop.com/register");
+        Assert.assertEquals(URL,"https://tws-uk-qa.azurewebsites.net/register");
     }
 
     // user to enter title in your details

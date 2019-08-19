@@ -17,16 +17,16 @@ public class HomeAndFurniturePage extends Utils
         Utils.waitForElementDisplay(_homeAndFurnitureHeading,5);
 
         // verifying user is on home and furniture page
-        Utils.assertURL("https://www.weddingshop.com/category/homeware-furniture");
+        Utils.assertURL("https://tws-uk-qa.azurewebsites.net/category/homeware-furniture");
     }
 
-    public void clickOnProductCategoryFromHomeAndFurniturePage(String productName)
+    public void clickOnProductCategoryFromHomeAndFurniturePage(String productCategory)
     {
 
         /* if-else blocks to get product category form scenario outline/examples
         to execute logic
          */
-        if (productName.equalsIgnoreCase("vases")){
+        if (productCategory.equalsIgnoreCase("vases")){
             Utils.waitForElementDisplay(_vases,5);
             Utils.clickElementBy(_vases);
         } else {

@@ -25,7 +25,7 @@ public class HomePage extends Utils
     {
         // verify user is on homepage
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL,"https://www.weddingshop.com/");
+        Assert.assertEquals(URL,"https://tws-uk-qa.azurewebsites.net/");
         System.out.println("User is on Homepage");
     }
 

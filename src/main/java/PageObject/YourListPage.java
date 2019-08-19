@@ -18,7 +18,7 @@ public class YourListPage extends Utils {
         Utils.implicitWait(5);
 
         // verifying user is your list page
-        Utils.assertURL("https://www.weddingshop.com/manage/your-list");
+        Utils.assertURL("https://tws-uk-qa.azurewebsites.net/manage/your-list");
     }
 
     public void verifyProductsInList()

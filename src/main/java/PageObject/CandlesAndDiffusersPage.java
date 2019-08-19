@@ -24,7 +24,7 @@ public class CandlesAndDiffusersPage extends Utils {
     public void verifyCandlesAndDiffuserUrl() {
         // verifying user is on Candles and DiffuserPage
         String URL = driver.getCurrentUrl();
-        Assert.assertEquals("https://www.weddingshop.com/category/homeware-furniture-home-accessories-candles-diffusers", URL);
+        Assert.assertEquals("https://tws-uk-qa.azurewebsites.net/category/homeware-furniture-home-accessories-candles-diffusers", URL);
     }
 
     public void selectPriceRange20to39() {

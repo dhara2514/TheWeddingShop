@@ -36,18 +36,24 @@ public class PlaceAnOrderPage extends Utils
         // dropdown method to select quantity of kettle
         Utils.selectByVisibleText(_quantityTraditionalKettle,"2");
 
+        Utils.waitForElementDisplay(_quantityTraditionalKettle,5);
+
     }
 
     public void clickOnAddToOrder()
     {
         // scroll up method to reach add vase to order
-        Utils.scrollUpORDown(-100);
+        Utils.scrollUpORDown(-200);
+
+        Utils.waitForElementDisplay(_addToOrderButtonEllinghamVase,5);
 
         // user clicks on add to order
         Utils.clickElementBy(_addToOrderButtonEllinghamVase);
 
+
         // scroll down method to reach add kettle to order
         Utils.scrollUpORDown(300);
+
 
         // Wait for Traditional Kettle to be displayed as the test becomes flaky otherwise
         Utils.waitForElementDisplay(_addToOrderTraditionalKettle,5);
@@ -58,7 +64,7 @@ public class PlaceAnOrderPage extends Utils
     public void clickOnViewBasketButton()
     {
         // scroll up method to reach view basket button
-        Utils.scrollUpORDown(-400);
+        Utils.scrollUpORDown(-600);
 
 
         // explicit wait to wait for view basket button to be visible

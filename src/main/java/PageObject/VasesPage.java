@@ -56,7 +56,7 @@ public class VasesPage extends Utils {
     public void clickOnYourListOption()
 
     {
-        // explicit waiti to wait for price range locator to be visible
+        // explicit wait to wait for price range locator to be visible
         Utils.waitForElementDisplay(_priceRangeLocator,5);
 
         // user clicks on price range

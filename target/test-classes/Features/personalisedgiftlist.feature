@@ -1,4 +1,4 @@
-@sanity
+@smoke
   Feature: Create personalised gift list and add to basket
 
     Background:
@@ -26,7 +26,7 @@
 
         Examples:
         |Product category | Product category page|Quantity |   Add to List   |
-        |stove top kettles|stove top kettles page|2 kettles|traditional kettle|
+        |stove top kettles|stove top kettles page|2 kettles|Le'Xpress Whistling|
         |vases            |    vases page        |2 vases  |   neptune vase   |
 
 

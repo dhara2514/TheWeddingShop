@@ -14,7 +14,7 @@ public class Hooks extends Utils
     {
         browserSelector.setUpBrowser();
 
-        driver.get("https://www.weddingshop.com/");
+        driver.get("https://tws-uk-qa.azurewebsites.net");
     }
 
     @After

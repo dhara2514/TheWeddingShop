@@ -13,12 +13,13 @@ public class DashboardPage extends Utils
 
     private By _welcomeText = By.cssSelector("div.left-sidebar__profile-img > p");
     private By _kitchenCategory = By.cssSelector("#main-dropdown-menu-2");
+    private By _homeAndFurniture = By.cssSelector("#main-dropdown-menu-3");
 
 
     public void verifyDashboardPage()
     {
         // verifying DashboardPage page
-        Utils.assertTextMessage("Welcome back"+"\nDhara & Dhara",_welcomeText);
+        Utils.assertTextMessage("Welcome back"+"\nDhara & Keyur",_welcomeText);
     }
 
    public void clickOnKitchenCategoryFromDashboard()
@@ -26,4 +27,11 @@ public class DashboardPage extends Utils
        // user clicks on kitchen category (using reusable method from Utils)
        Utils.clickElementBy(_kitchenCategory);
    }
+
+    public void clickOnHomeAndFurnitureCategory()
+    {
+
+        //Utils.clickElementBy(_scrollUpButton);
+        Utils.clickElementBy(_homeAndFurniture);
+    }
 }

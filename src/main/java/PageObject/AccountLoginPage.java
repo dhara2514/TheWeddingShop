@@ -24,7 +24,7 @@ public class AccountLoginPage extends Utils
   public void verifyAccountLoginPageUrl()
   {
       //Assert of Url to verify user is on AccountLogin page
-     Utils.assertURL("https://www.weddingshop.com/account-login");
+     Utils.assertURL("https://tws-uk-qa.azurewebsites.net/account-login");
 
   }
 

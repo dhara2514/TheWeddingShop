@@ -1,4 +1,5 @@
 @smoke
+
 Feature: Use the website to find products So that I can build a personalised gift list
          As a customer with an upcoming wedding
          I want to be able to find products to my taste

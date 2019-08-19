@@ -44,16 +44,17 @@ public class PersonalisedGiftListStepDefs
     }
 
     @When("^user clicks on product category \"([^\"]*)\"$")
-    public void user_clicks_on_product_category(String productName)
+    public void user_clicks_on_product_category(String productCategory)
     {
-        if (productName.equalsIgnoreCase("stove top kettles")) {
+        if (productCategory.equalsIgnoreCase("stove top kettles")) {
             dashboardPage.clickOnKitchenCategoryFromDashboard();
             kitchenPage.verifyKitchenUrl();
-            kitchenPage.clickOnProductCategoryFromKitchenPage(productName);
-            } else if (productName.equalsIgnoreCase("vases")) {
-            stoveTopKettlePage.clickOnHomeAndFurnitureCategory();
+            kitchenPage.clickOnProductCategoryFromKitchenPage(productCategory);
+            }
+        else if (productCategory.equalsIgnoreCase("vases")) {
+            dashboardPage.clickOnHomeAndFurnitureCategory();
             homeAndFurniturePage.verifyHomeAndFurnitureUrl();
-            homeAndFurniturePage.clickOnProductCategoryFromHomeAndFurniturePage(productName);
+            homeAndFurniturePage.clickOnProductCategoryFromHomeAndFurniturePage(productCategory);
         }
     }
 
@@ -77,16 +78,19 @@ public class PersonalisedGiftListStepDefs
 
     @When("^user clicks on add to list \"([^\"]*)\"$")
     public void user_clicks_on_add_to_list(String productName) {
-        if (productName.equalsIgnoreCase("traditional kettle")){
+        if (productName.equalsIgnoreCase("Le'Xpress Whistling")){
             stoveTopKettlePage.addStoveTopKettlesToList(productName);
+
         }else if (productName.equalsIgnoreCase("neptune vase")) {
             vasesPage.addVaseToList(productName);
         }
+
     }
 
 
     @When("^user clicks on 'Your List' under account link$")
-    public void user_clicks_on_Your_List_under_account_link() {
+    public void user_clicks_on_Your_List_under_account_link()
+    {
         vasesPage.clickOnYourListOption();
     }
 
