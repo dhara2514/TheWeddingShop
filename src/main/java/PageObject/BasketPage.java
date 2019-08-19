@@ -118,8 +118,6 @@ public class BasketPage extends Utils {
         actual = driver.findElement(_subTotalOfKettle).isDisplayed();
         Assert.assertTrue("60.00", true);
         System.out.println("The subtotal of " + expectedProductName2 + " is £60 which is " + actual);
-
-
     }
 
 
