@@ -11,7 +11,10 @@ public class StoveTopKettlePage extends Utils
     private By _quantityOfKettle = By.xpath("(//*[@class='form-field__input form-field__input--select  form-control'])[3]");
     private By _addWhistlingKettleToList = By.xpath("(//*[@class='button product__button product__button--inline button--light-orange'])[1]");
     private By _scrollUpButton = By.cssSelector("[class='scroll-to-top']");
-    private By _yourListButton = By.id("btn-your-list");
+    private By _yourListButton = By.cssSelector("#btn-your-list");
+    private By _accountLink = By.cssSelector("#link-account");
+    private By _yourList = By.id("link-manage-your-list");
+    private By _searchIcon = By.id("icon-search");
     public void verifyStoveKettlePage(String productPage)
     {
         /* if-else blocks to get product category form scenario outline/examples
@@ -60,9 +63,17 @@ public class StoveTopKettlePage extends Utils
 
         Utils.waitForElementDisplay(_scrollUpButton,5);
         Utils.clickElementBy(_scrollUpButton);
-        Utils.waitForElementDisplay(_yourListButton,3);
-        Utils.clickElementBy(_yourListButton);
-
+//        Utils.waitForElementDisplay(_yourListButton,5);
+//        Utils.clickElementBy(_yourListButton);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //Utils.waitForElementDisplay(_searchIcon,5);
+        Utils.clickElementBy(_searchIcon);
+        Utils.waitForElementDisplay(_accountLink,5);
+        Utils.hoverAndClickOnElement(_accountLink,_yourList);
     }
 
 

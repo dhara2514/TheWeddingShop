@@ -72,11 +72,11 @@ public class CandlesAndDiffusersPage extends Utils {
                     System.out.println(number.toString());
 
                     // Assert product price is greater than or equal to £20
-                    Assert.assertTrue(number.intValue() >= 20.00);
+                    Assert.assertTrue(number.intValue() >= 20);
                     System.out.println("This product price is greater then £20");
 
                     // Assert product price is less than or equal to £39
-                    Assert.assertTrue(number.intValue() <= 39.00);
+                    Assert.assertTrue(number.intValue() <= 39);
                     System.out.println("This product price is less then £39");
                 }
                     // if block to paginate and go to next page
